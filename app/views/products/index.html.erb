@@ -1,41 +1,19 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Factory Bikes</h1>
-<table width="100%">
-<thead>
-<tr>
-<Caption>World Class Quality Bikes At Bargain prices</Caption>
-</tr>
-</thead>
-<tfoot>
-<tr>
-<td colspan="4">Sports And Outdoor Bikes</td>
-</tr>
-</tfoot>
-<tbody>
-<tr><td rowspan="2">Name</td></tr>
-<tr><td rowspan="2">Description</td></tr>
-<tr><td rowspan="2">Image</td></tr>
-<tr><td rowspan="2">Availability</td></tr>
-<tr><td rowspan="2">Color</td></tr>
-<tr><td rowspan="2">Price</td></tr>
-</tbody>
-
+<h1>Listing products</h1>
+<table>
   <tbody>
-    <% @products.each do |product| %>
-      <tr :class  => "crazy">    
-        <h2 :class => "loco"><%= product.name %></h2>
-        <td><%= product.description %></td>
-        <td><%= product.image_url %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <div class="container-fluid">
+      <div class="row">
+       <% @products.each do |product| %>
+        <div class="col-sm-2 col-md-4">
+        <%= image_tag(product.image_url, class: "img-responsive") %>
+        <h1><%= product.name %></h1>
+        <p><%= product.description %></p>
+        </div><!-- /col -->
+       <% end %>
+     </div>
+    </div>
   </tbody>
-
 </table>
-
 <br>
-
 <%= link_to 'New Product', new_product_path %>

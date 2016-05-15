@@ -6,10 +6,10 @@
       <div class="row">
        <% @products.each do |product| %>
            <%= render product %>
-        <% end %>
+       <% end %>
      </div>
     </div>
   </tbody>
 </table>
-<br>
+<br><br>
 <%= link_to 'New Product', new_product_path %>

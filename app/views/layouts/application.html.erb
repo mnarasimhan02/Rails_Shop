@@ -32,13 +32,22 @@
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
 	      <ul class="nav navbar-nav navbar-right">
-	      <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-	       <li><a href="/static_pages/contact"><span class="glyphicon glyphicon-envelope"></span> Contact us</a></li>
+	      	<li>
+	      		<% if user_signed_in? %>
+   					 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+  				<% else %>
+    				<%= link_to('Login', new_user_session_path) %>
+  				<% end %>
+ 			</li>
+		      <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+		       <li><a href="/static_pages/contact"><span class="glyphicon glyphicon-envelope"></span> Contact us</a></li>
 	       </ul>
 	    </div>
 	  </div>
 	</nav>
 </div>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <% end %>
 <%= yield %>
 <footer class="site-footer">&copy;2015 Bike Berlin</footer>

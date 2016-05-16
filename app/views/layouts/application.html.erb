@@ -22,21 +22,25 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>                        
 	      </button>
-	      <a class="navbar-brand" href="#">Bike Shop</a>
+	      <a class="navbar-brand" href="#">
+	      	<%= image_tag("brandlogo.gif", class: "img-responsive my-image", size:"50x50") %>
+	      </a>
+	        <%= form_tag("/products", method: "get", class: "navbar-form navbar-left") do %>
+  			<%= label_tag(:q, "") %>
+  			<%= text_field_tag(:q) %>
+  			<%= submit_tag "Search", class: "btn btn-default btn_search"%>
 	    </div>
 	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Home</a></li>
-	        <li><a href="#">Page 1</a></li>
-	       </ul>
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	      <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	       <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
 </div>
+<% end %>
 <%= yield %>
 <footer class="site-footer">&copy;2015 Bike Berlin</footer>
 </body>

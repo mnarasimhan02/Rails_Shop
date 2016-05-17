@@ -47,7 +47,13 @@
 	</nav>
 </div>
 <p class="notice"><%= notice %></p>
+	<% if notice %>
+	    <p id="notice" class="alert alert-info"><%= notice %></p>
+	<% end %>
 <p class="alert"><%= alert %></p>
+	<% if alert %>
+	    <p id="alert" class="alert alert-info"><%= alert %></p>
+	<% end %>
 <% end %>
 <%= yield %>
 <footer class="site-footer">&copy;2015 Bike Berlin</footer>

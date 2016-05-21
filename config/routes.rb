@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   devise_for :views
-  resources :users
-  resources :products
+  
+  resources :products do
+    resources :comments
+  end
+    resources :users
+#User reviews are associated to specifc product and hence creating nested resources
+#can be referenced as @product.comments
+
   get 'static_pages/about'
 
   get 'static_pages/contact'

@@ -53,6 +53,10 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.4'
+end
+
 group :production do
   gem 'rails_12factor'
   gem 'pg'

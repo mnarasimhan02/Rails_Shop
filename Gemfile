@@ -13,6 +13,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'will_paginate', '~> 3.1.0'
 #gem include gem for pagination
+#gem to run tasks automatically
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -43,21 +44,20 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
 # Use sqlite3 as the database for Active Record
-
 group :development, :test do
   gem 'sqlite3'
-end
-
-group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   gem "factory_girl_rails", "~> 4.0"
+  gem 'guard'
+  gem 'guard-rspec', require: false
+  gem 'spork-rails'
+  gem 'rb-fsevent'
+  gem 'guard-spork'
 end
-
 group :production do
   gem 'rails_12factor'
   gem 'pg'

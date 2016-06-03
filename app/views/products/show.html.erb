@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= form_tag "/payments/create" do %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
+<br>
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -9,14 +13,16 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-
+<p>
+  Price: <%= number_to_currency(@product.price) %>
+</p>
 <p>
   <strong>Image url:</strong>
   <%= @product.image_url %>
 </p>
 
 <p>
-  <strong>Colour:</strong>
+  <strong>Color:</strong>
   <%= @product.colour %>
 </p>
 

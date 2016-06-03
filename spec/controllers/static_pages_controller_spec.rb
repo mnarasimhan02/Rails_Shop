@@ -1,4 +1,4 @@
-require 'rails_helper'
+#require 'rails_helper'
 
 describe StaticPagesController, :type => :controller do
   context "GET #index" do

@@ -1,28 +1,28 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Back', products_path %>
+<div class="row">
+  <div class="col-md-4"><%= image_tag(@product.image_url, width: "300", class: "img-zoom", data_zoom_image: @product.image_url) %></div>
+  <div class="col-md-4">
 <p>
-  <strong>Name:</strong>
-  <%= @product.name %>
+  <h1><%= @product.name %></h1>
 </p>
-
 <p>
-  <strong>Description:</strong>
   <%= @product.description %>
 </p>
 <p>
   Price: <%= number_to_currency(@product.price) %>
 </p>
 <p>
-  <strong>Image url:</strong>
   <%= @product.image_url %>
 </p>
-
 <p>
-  <strong>Color:</strong>
   <%= @product.colour %>
 </p>
     <%= form_tag("/payments/create", remote: true) do %>
       <%= render partial: "shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
-    <% end %>
+  </div>
+</div>
+<% end %>
 <%= render 'new_comment' %>
 <%= render 'comments' %>

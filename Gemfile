@@ -30,7 +30,9 @@ gem 'cancancan'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'stripe'
-gem 'chosen-rails'
+# Use Stripe for payment controller
+gem 'angularjs-rails'
+# Use clientside MVC
 
 # Use Unicorn as the app server
 # gem 'unicorn'

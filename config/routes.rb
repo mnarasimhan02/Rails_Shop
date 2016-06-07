@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :users
 #User reviews are associated to specifc product and hence creating nested resources
 #can be referenced as @product.comments
+  post 'payments/create'
 
   get 'static_pages/about'
 

@@ -33,6 +33,8 @@ gem 'stripe'
 # Use Stripe for payment controller
 gem 'angularjs-rails'
 # Use clientside MVC
+gem 'dalli'
+
 
 # Use Unicorn as the app server
 # gem 'unicorn'

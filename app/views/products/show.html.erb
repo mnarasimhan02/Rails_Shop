@@ -1,3 +1,4 @@
+<% cache @product do %>
 <p id="notice"><%= notice %></p>
 <%= link_to 'Back', products_path %>
 <div class="row">
@@ -21,6 +22,7 @@
     <%= form_tag("/payments/create", remote: true) do %>
       <%= render partial: "shared/stripe_checkout_button" %>
       <%= hidden_field_tag(:product_id, @product.id) %>
+      <% end %>
   </div>
 </div>
 <% end %>

@@ -1,3 +1,4 @@
+<% cache(cache_key_for_products) do %>
 <p id="notice"><%= notice %></p>
 <h1>Listing products</h1>
 <table>
@@ -12,4 +13,5 @@
   </tbody>
 </table>
 <br><br>
+<% end %>
 <%= link_to 'New Product', new_product_path %>

@@ -57,3 +57,26 @@ p {
 {
     margin-left: 20px;
 }
+.help {
+    display:none;
+    font-size:90%;
+}
+input:focus + .help,
+input:invalid + .help {
+    display:inline-block;
+}
+input:required {
+    background:hsl(180, 50%, 90%);
+    border:1px solid #999;
+}
+.commentrow {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+.col-md-4
+{
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

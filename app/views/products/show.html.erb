@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <%= link_to 'Back', products_path %>
 <div class="row">
-  <div class="col-md-4"><%= image_tag(@product.image_url, width: "300", class: "img-zoom", data_zoom_image: @product.image_url) %></div>
+  <div class="col-md-4" align= "right"><%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url) %></div>
   <div class="col-md-4">
 <p>
   <h1><%= @product.name %></h1>

@@ -4,21 +4,29 @@
 <div class="row">
   <div class="col-md-4">
     <div class="form-group">
+      <p>
       <label for="name">Name (required):</label>
         <input type="text" id="name" name="name" class= "form-control" value="" 
-        aria-describedby="name-format" aria-required="true" 
+        aria-describedby="name-format" required aria-required="true" 
         pattern="[A-Za-z-0-9]+\s[A-Za-z-'0-9]+" placeholder="Firstname Lastname">
         <span id="name-format" class="help">Format: firstname lastname</span>
+      </p>
     </div>      
     <div class="form-group">
-      <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
+      <p>
+      <label for="name">Email Address</label>
+      <input type="text" id="email-format" name="email" class= "form-control" value="" 
+      aria-describedby="email-format" required aria-required="true" placeholder="Enter Email">
+      <span id="email-format" class="help">Enter Email</span>
+    </p>
     </div>
     <div class="form-group">
+    <p>
       <%= label_tag :message, "Message" %>
       <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+    </p>
     </div>      
   </div>
 </div>
-<%= submit_tag "Send" %>   
+<p><%= submit_tag "Send" %> </p>
 <% end %>

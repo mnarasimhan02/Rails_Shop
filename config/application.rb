@@ -1,7 +1,6 @@
 require File.expand_path('../boot', __FILE__)
-
 require 'rails/all'
-config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+#config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

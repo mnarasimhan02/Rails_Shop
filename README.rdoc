@@ -1,27 +1,5 @@
+<img src="https://cloud.githubusercontent.com/assets/16976605/20291164/765aba20-aab2-11e6-8776-de1066441de9.gif" width="15%"></img> 
+
 == README
 
-First Rails App in GIT 
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ECommerce  App in Ruby on Rails
